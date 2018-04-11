@@ -78,4 +78,6 @@ SCRIPT_TABLE = {
     'FEMININE': (1, 'latin')
 }
 
-```</body></html>
+```
+
+</body></html>
