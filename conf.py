@@ -320,7 +320,7 @@ COMPILERS = {
 
 # Writes tag cloud data in form of tag_cloud_data.json.
 # Warning: this option will change its default value to False in v8!
-WRITE_TAG_CLOUD = True
+WRITE_TAG_CLOUD = False
 
 # Generate pages for each section. The site must have at least two sections
 # for this option to take effect. It wouldn't build for just one section.
@@ -618,7 +618,29 @@ USE_BASE_TAG = False
 # relative URL.
 #
 # If you don't need any of these, just set to []
-REDIRECTIONS = []
+REDIRECTIONS = [
+    ["2017/06/19/bugfix-our-english-only-word-vectors-contained-the-wrong-data/index.html", "/posts/2017/06/19/bugfix-our-english-only-word-vectors-contained-the-wrong-data.html"],
+    ["2016/11/03/conceptnet-5-5-and-conceptnet-io/index.html", "/posts/2016/11/03/conceptnet-5-5-and-conceptnet-io.html"], 
+    ["2016/05/19/wordfreq-open-source-and-open-data-about-word-frequencies/index.html", "/posts/2016/05/19/wordfreq-open-source-and-open-data-about-word-frequencies.html"], 
+    ["2017/04/24/conceptnet-numberbatch-17-04-better-less-stereotyped-word-vectors/index.html", "/posts/2017/04/24/conceptnet-numberbatch-17-04-better-less-stereotyped-word-vectors.html"],
+    ["2016/05/19/an-introduction-to-the-conceptnet-vector-ensemble/index.html", "/posts/2016/05/19/an-introduction-to-the-conceptnet-vector-ensemble.html"],
+    ["2016/08/19/people-want-pre-computed-word-embeddings/index.html", "/posts/2016/08/19/people-want-pre-computed-word-embeddings.html"],
+    ["2017/03/02/how-luminoso-made-conceptnet-into-the-best-word-vectors-and-won-at-semeval/index.html", "/posts/2017/03/02/how-luminoso-made-conceptnet-into-the-best-word-vectors-and-won-at-semeval.html"],
+    ["2016/08/22/wordfreq-1-5-more-data-more-languages-more-accuracy/index.html", "/posts/2016/08/22/wordfreq-1-5-more-data-more-languages-more-accuracy.html"],
+    ["2016/06/01/cramming-for-the-test-set-we-need-better-ways-to-evaluate-analogies/index.html", "/posts/2016/06/01/cramming-for-the-test-set-we-need-better-ways-to-evaluate-analogies.html"],
+    ["2017/08/30/interview-on-de-biasing-nlp/index.html", "/posts/2017/08/30/interview-on-de-biasing-nlp.html"],
+    ["2016/06/02/wordfreq-1-4-more-words-plus-word-frequencies-from-reddit/index.html", "/posts/2016/06/02/wordfreq-1-4-more-words-plus-word-frequencies-from-reddit.html"],
+    ["2017/08/12/you-werent-supposed-to-actually-implement-it-google/index.html", "/posts/2017/08/12/you-werent-supposed-to-actually-implement-it-google.html"],
+    ["2017/07/13/how-to-make-a-racist-ai-without-really-trying/index.html", "/posts/2017/07/13/how-to-make-a-racist-ai-without-really-trying.html"],
+    ["2016/05/25/conceptnet-numberbatch-a-new-name-for-the-best-word-embeddings-you-can-download/index.html", "/posts/2016/05/25/conceptnet-numberbatch-a-new-name-for-the-best-word-embeddings-you-can-download.html"],
+    ["2016/05/19/ftfy-fixes-text-for-you-4-0-changing-less-and-fixing-more/index.html", "/posts/2016/05/19/ftfy-fixes-text-for-you-4-0-changing-less-and-fixing-more.html"],
+    ["2016/05/19/fixing-unicode-mistakes-and-more-the-ftfy-package/index.html", "/posts/2016/05/19/fixing-unicode-mistakes-and-more-the-ftfy-package.html"],
+    ["2017/03/14/ftfy-fixes-text-for-you-4-4-and-5-0/index.html", "/posts/2017/03/14/ftfy-fixes-text-for-you-4-4-and-5-0.html"],
+    ["2016/05/19/ftfy-fixes-text-for-you-version-3-0/index.html", "/posts/2016/05/19/ftfy-fixes-text-for-you-version-3-0.html"],
+    ["2016/05/19/wordfreq-1-2-is-better-at-chinese-english-greek-polish-swedish-and-turkish/index.html", "/posts/2016/05/19/wordfreq-1-2-is-better-at-chinese-english-greek-polish-swedish-and-turkish.html"],
+    ["2016/05/19/fixing-common-unicode-mistakes-with-python-after-theyve-been-made/index.html", "/posts/2016/05/19/fixing-common-unicode-mistakes-with-python-after-theyve-been-made.html"],
+    ["2017/07/05/conceptnet-5-5-5-update/index.html", "/posts/2017/07/05/conceptnet-5-5-5-update.html"]
+]
 
 # Presets of commands to execute to deploy. Can be anything, for
 # example, you may use rsync:
