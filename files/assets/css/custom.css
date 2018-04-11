@@ -1,0 +1,14 @@
+body {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 19px;
+    line-height: 1.8em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Noto Sans', 'Droid Sans', Helvetica, Arial, sans-serif;
+    font-weight: bold;
+}
+
+p, li {
+    max-width: 80%;
+}
