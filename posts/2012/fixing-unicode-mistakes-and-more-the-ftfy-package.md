@@ -1,5 +1,4 @@
-<html><body><h6><em>Originally posted on August 24, 2012.</em></h6>
-
+<html><body>
 There's been a great response to my earlier post, <a title="Fixing common Unicode mistakes with Python â€” after they’ve been made" href="https://conceptnetblog.wordpress.com/2016/05/19/fixing-common-unicode-mistakes-with-python-ae-after-theyve-been-made/" target="_blank" rel="noopener noreferrer">Fixing common Unicode mistakes with Python</a>. This is clearly something that people besides me needed. In fact, someone already made the code into a web site, at <a title="fixencoding.com" href="http://fixencoding.com/">fixencoding.com</a>. I like the favicon.
 
 I took the suggestion to split the code into a new standalone package. It's now called <strong><a title="python-ftfy" href="http://github.com/LuminosoInsight/python-ftfy">ftfy</a></strong>, standing for "fixes text for you". You can install it with <em>pip install ftfy</em>.

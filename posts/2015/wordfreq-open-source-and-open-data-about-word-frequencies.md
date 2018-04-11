@@ -1,4 +1,4 @@
-<html><body><h6><em>Originally posted on September 1, 2015.</em></h6>
+<html><body>
 
 Often, in NLP, you need to answer the simple question: "is this a common word?" It turns out that this leaves the computer to answer a more vexing question: "What's a word?"
 

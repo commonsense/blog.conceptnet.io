@@ -1,4 +1,4 @@
-<html><body><h6><em>Originally posted on October 29, 2015.</em></h6>
+<html><body>
 
 <a href="https://gist.github.com/rspeer/0a5dc7e6983d2ce752b5"><img class="wp-image-823 size-full" src="https://luminosoinsight.files.wordpress.com/2015/10/wordfreq-1-2-examples.png" alt="Wordfreq 1.2 example code" width="407" height="203"></a> Examples in Chinese and British English. Click through for copyable code.
 

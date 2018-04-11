@@ -1,4 +1,4 @@
-<html><body><h6><em>Originally posted on May 21, 2015.</em></h6>
+<html><body>
 
 <a href="https://github.com/LuminosoInsight/python-ftfy" target="_blank" rel="noopener noreferrer">ftfy</a> is a Python tool that takes in bad Unicode and outputs good Unicode. I developed it because we really needed it at <a href="http://www.luminoso.com" target="_blank" rel="noopener noreferrer">Luminoso</a> -- the text we work with can be damaged in several ways by the time it gets to us. It's become our most popular open-source project by far, as many other people have the same itch that we're scratching.
 

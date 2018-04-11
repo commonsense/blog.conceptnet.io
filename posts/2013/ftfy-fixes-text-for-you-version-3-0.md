@@ -1,4 +1,4 @@
-<html><body><h6><em>Originally posted on August 26, 2013.</em></h6>
+<html><body>
 
 About a year ago, we blogged about how to ungarble garbled Unicode in a post called <a title="Fixing common Unicode mistakes with Python â€” after they’ve been made" href="https://conceptnetblog.wordpress.com/2016/05/19/fixing-common-unicode-mistakes-with-python-ae-after-theyve-been-made/">Fixing common Unicode mistakes with Python â€” after they’ve been made</a>. Shortly after that, we released the code in a Python package called <a href="https://github.com/LuminosoInsight/python-ftfy">ftfy</a>.
 
