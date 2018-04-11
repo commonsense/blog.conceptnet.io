@@ -22,13 +22,13 @@ The Bolukbasi et al. paper describes how to counteract gender bias, and by adapt
 
 The graph you see below shows what we've done so far. The y-axis is a scale that we came up with involving the dot products between word vectors and their possible stereotypes: closer to zero is better. The brown bar, "ConceptNet Numberbatch 17.04", is the de-biased system we're releasing. (The version number represents the date, April 2017.)
 
-<img class="alignnone size-full wp-image-707" src="/2017/04/bias-graph.png" alt="bias-graph.png" width="848" height="349">
+<img class="alignnone size-full wp-image-707" src="/2017/04/bias-graph.png" alt="bias-graph.png">
 
 We're not trying to say we've solved the problem, but we can conclude that we've made the problem smaller. Keep in mind that this evaluation itself will likely change in the future, as we gain a better understanding of how to measure bias.
 
 In dealing with machine-learning bias, there's the concern that removing the bias could also cause changes that remove accuracy. But we've found that the change is negligible: about 1% of the overall result, much smaller than the error bars. Here's the updated evaluation graph. The y-axis is the Spearman correlation with gold standard data (higher is better). The evaluations here are for English words only -- Numberbatch covers many more languages, but the systems we're comparing to don't.
 
-<img class="alignnone size-full wp-image-772" src="/2017/04/eval-graph.png" alt="eval-graph" width="4898" height="2019">
+<img class="alignnone size-full wp-image-772" src="/2017/04/eval-graph.png" alt="eval-graph">
 
 ConceptNet Numberbatch is already so much more accurate than any other released system that it can lose 1% of its accuracy for a good cause. If you want 1% more accuracy out of your word vectors, I suggest focusing on improving a knowledge graph, not putting back the stereotypes.
 

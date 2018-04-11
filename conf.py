@@ -358,7 +358,7 @@ POSTS_SECTIONS = True
 
 # Sections are determined by their output directory as set in POSTS by default,
 # but can alternatively be determined from file metadata instead.
-# POSTS_SECTION_FROM_META = False
+POSTS_SECTION_FROM_META = True
 
 # Names are determined from the output directory name automatically or the
 # metadata label. Unless overwritten below, names will use title cased and
