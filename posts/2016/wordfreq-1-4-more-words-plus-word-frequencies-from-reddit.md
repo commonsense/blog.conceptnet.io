@@ -1,4 +1,4 @@
-<html><body><p>The <a href="https://github.com/LuminosoInsight/wordfreq">wordfreq</a> module is an easy Python interface for looking up the frequencies of words. It was originally designed for use cases where it was most important to find common words, so it would list all the words that occur at least once per million words: that's about 30,000 words in English. An advantage of ending the list there is that it loads really fast and takes up a small amount of RAM.
+The <a href="https://github.com/LuminosoInsight/wordfreq">wordfreq</a> module is an easy Python interface for looking up the frequencies of words. It was originally designed for use cases where it was most important to find common words, so it would list all the words that occur at least once per million words: that's about 30,000 words in English. An advantage of ending the list there is that it loads really fast and takes up a small amount of RAM.
 
 But there's more to know about word frequencies. There's a difference between words that are used a bit less than once in a million words, like "almanac", "crusty", and "giraffes", versus words that are used just a few times per billion, such as "centerback", "polychora", and "scanlations". As I've started using wordfreq in some aspects of the build process of ConceptNet, I've wanted to be able to rank words by frequency even if they're less common than "giraffes", and I'm sure other people do too.
 
@@ -14,26 +14,24 @@ I used <a href="https://github.com/aboSamoor/pycld2">pycld2</a> to detect the la
 
 So now some Reddit-centric words have claimed a place in the English word list, alongside words from Google Books, Wikipedia, Twitter, television subtitles, and the Leeds Internet Corpus:
 
-```http://crr.ugent.be/archives/1352
-
-&gt;&gt;&gt; wordfreq.zipf_frequency('people', 'en', 'large')
+```python
+>>> wordfreq.zipf_frequency('people', 'en', 'large')
 6.23
 
-&gt;&gt;&gt; wordfreq.zipf_frequency('cats', 'en', 'large')
+>>> wordfreq.zipf_frequency('cats', 'en', 'large')
 4.42
 
-&gt;&gt;&gt; wordfreq.zipf_frequency('giraffes', 'en', 'large')
+>>> wordfreq.zipf_frequency('giraffes', 'en', 'large')
 3.0
 
-&gt;&gt;&gt; wordfreq.zipf_frequency('narwhals', 'en', 'large')
+>>> wordfreq.zipf_frequency('narwhals', 'en', 'large')
 2.1
 
-&gt;&gt;&gt; wordfreq.zipf_frequency('heffalumps', 'en', 'large')
+>>> wordfreq.zipf_frequency('heffalumps', 'en', 'large')
 1.78
 
-&gt;&gt;&gt; wordfreq.zipf_frequency('borogoves', 'en', 'large')
+>>> wordfreq.zipf_frequency('borogoves', 'en', 'large')
 1.16
-
 ```
 
-wordfreq is part of a stack of natural language tools developed at <a href="http://luminoso.com">Luminoso</a> and used in <a href="http://conceptnet.io">ConceptNet</a>. Its data is available under the <a href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0</a> license.</body></html>
+wordfreq is part of a stack of natural language tools developed at <a href="http://luminoso.com">Luminoso</a> and used in <a href="http://conceptnet.io">ConceptNet</a>. Its data is available under the <a href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0</a> license.

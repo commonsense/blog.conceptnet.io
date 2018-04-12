@@ -1,6 +1,9 @@
-<html><body><a href="https://github.com/LuminosoInsight/wordfreq">wordfreq</a> is a useful dataset of word frequencies in many languages, and a simple Python library that lets you look up the frequencies of words (or word-like tokens, if you want to quibble about what's a word). <a href="https://github.com/LuminosoInsight/wordfreq/blob/master/CHANGELOG.md">Version 1.5</a> is now available on <a href="https://github.com/LuminosoInsight/wordfreq">GitHub</a> and <a href="https://pypi.python.org/pypi/wordfreq">PyPI</a>.
 
-<a href="/2016/08/wordfreq-en.png"><img src="https://conceptnetblog.files.wordpress.com/2016/08/wordfreq-en.png?w=710" alt="wordfreq can rank the frequencies of nearly 400,000 English words. These are some of them." width="710" height="1024" class="size-large wp-image-167"></a> wordfreq can rank the frequencies of nearly 400,000 English words. These are some of them.
+<a href="https://github.com/LuminosoInsight/wordfreq">wordfreq</a> is a useful dataset of word frequencies in many languages, and a simple Python library that lets you look up the frequencies of words (or word-like tokens, if you want to quibble about what's a word). <a href="https://github.com/LuminosoInsight/wordfreq/blob/master/CHANGELOG.md">Version 1.5</a> is now available on <a href="https://github.com/LuminosoInsight/wordfreq">GitHub</a> and <a href="https://pypi.python.org/pypi/wordfreq">PyPI</a>.
+
+<a href="/2016/08/wordfreq-en.png"><img src="https://conceptnetblog.files.wordpress.com/2016/08/wordfreq-en.png?w=710" alt="wordfreq can rank the frequencies of nearly 400,000 English words. These are some of them." style="width: 50%; height: 50%;"></a>
+
+*wordfreq can rank the frequencies of nearly 400,000 English words. These are some of them.*
 
 These word frequencies don't just come from one source; they combine many sources to take into account many different ways to use language.
 
@@ -24,19 +27,16 @@ wordfreq can still analyze formal or informal writing without its top frequencie
 
 The reason the median is <em>weighted</em> is so we can still compare frequencies of words that don't appear in a majority of sources. If a source has never seen a word, that could just be sampling noise, so its vote of 0 for what the word's frequency should be counts less. As a result, there are still source-specific words, just with a lower frequency than they had in wordfreq 1.4:
 
-```
-[code lang=python]
-&gt;&gt;&gt; # Some source data has split off "n't" as a
-&gt;&gt;&gt; # separate token
-&gt;&gt;&gt; wordfreq.zipf_frequency("n't", 'en', 'large')
+```python
+>>> # Some source data has split off "n't" as a separate token
+>>> wordfreq.zipf_frequency("n't", 'en', 'large')
 2.28
 
-&gt;&gt;&gt; wordfreq.zipf_frequency('retweet', 'en', 'large')
+>>> wordfreq.zipf_frequency('retweet', 'en', 'large')
 1.57
 
-&gt;&gt;&gt; wordfreq.zipf_frequency('eli5', 'en', 'large')
+>>> wordfreq.zipf_frequency('eli5', 'en', 'large')
 1.45
-[/code]
 ```
 
 <h2>Why use only non-English data in the Common Crawl?</h2>
@@ -55,4 +55,5 @@ Here's another chart showing the frequencies of miscellaneous words, this time i
 
 <a href="/2016/08/wordfreq-chart.png"><img src="https://conceptnetblog.files.wordpress.com/2016/08/wordfreq-chart.png?w=840" alt="A chart of selected word frequencies in 27 languages." width="840" height="562" class="aligncenter size-large wp-image-178"></a>
 
-Getting wordfreq in your Python environment is as easy as <code>pip install wordfreq</code>. We hope you find this data useful in helping computers make sense of language!</body></html>
+Getting wordfreq in your Python environment is as easy as <code>pip install wordfreq</code>. We hope you find this data useful in helping computers make sense of language!
+

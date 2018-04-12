@@ -2,9 +2,13 @@
 
 In particular, I've been pointing to results showing that our precomputed vectors, <a href="http://blog.conceptnet.io/2016/05/25/conceptnet-numberbatch-a-new-name-for-the-best-word-embeddings-you-can-download/">ConceptNet Numberbatch</a>, are the state of the art in multiple languages. Now we've verified this by participating in SemEval 2017 Task 2, "Multilingual and Cross-lingual Semantic Word Similarity", and winning in a landslide.
 
-<a href="/2017/03/semeval-subtask1.png"><img src="/2017/03/semeval-subtask1.png" alt="A graph of the SemEval multilingual task results, showing the Luminoso system performing above every other system in every language, except for two systems that only submitted results in Farsi." width="796" height="498" class="size-full wp-image-466"></a> Performance of SemEval systems on the Multilingual Word Similarity task. Our system, in blue, shows its 95% confidence interval.
+<a href="/2017/03/semeval-subtask1.png"><img src="/2017/03/semeval-subtask1.png" alt="A graph of the SemEval multilingual task results, showing the Luminoso system performing above every other system in every language, except for two systems that only submitted results in Farsi." width="796" height="498" class="size-full wp-image-466"></a>
 
-<a href="/2017/03/semeval-subtask2.png"><img src="/2017/03/semeval-subtask2.png" alt="A graph of the SemEval cross-lingual task results, showing the Luminoso system performing above every other system in every language pair." width="786" height="617" class="size-full wp-image-467"></a> Performance of SemEval systems on the Cross-lingual Word Similarity task. Our system, in blue, shows its 95% confidence interval.
+*Performance of SemEval systems on the Multilingual Word Similarity task. Our system, in blue, shows its 95% confidence interval.*
+
+<a href="/2017/03/semeval-subtask2.png"><img src="/2017/03/semeval-subtask2.png" alt="A graph of the SemEval cross-lingual task results, showing the Luminoso system performing above every other system in every language pair." width="786" height="617" class="size-full wp-image-467"></a>
+
+*Performance of SemEval systems on the Cross-lingual Word Similarity task. Our system, in blue, shows its 95% confidence interval.*
 
 SemEval is a long-running evaluation of computational semantics. It does an important job of counteracting publication bias. Most people will only publish evaluations where their system performs well, but SemEval allows many groups to compete head-to-head on an evaluation they haven't seen yet, with results released all at the same time. When SemEval results come out, you can see a fair comparison of everyone's approach, with positive and negative results.
 
@@ -32,7 +36,9 @@ Some publications use the dramatic cop-out of skipping all OOV words in their ev
 
 In general, when a system encounters an OOV word, there has to be some strategy for dealing with it. Perhaps you replace all OOV words with a single symbol for unknown words, "unk", a strategy common enough to have become a verb.
 
-[embed]https://twitter.com/yoavgo/status/788140563015098369[/embed]
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">why language is cool: &quot;to unk&quot; can become a verb and we&#39;re perfectly fine with understanding it. <a href="https://t.co/laIOZOUHTT">pic.twitter.com/laIOZOUHTT</a></p>&mdash; (((λ()(λ() &#39;yoav)))) (@yoavgo) <a href="https://twitter.com/yoavgo/status/788140563015098369?ref_src=twsrc%5Etfw">October 17, 2016</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
 
 SemEval doesn't let you dodge OOV words: you need to submit some similarity value for every pair, even if your system has no idea. "Unking" would not have worked very well for comparing words. It seemed to us that a good OOV strategy would make a noticeable difference in the results. We made a couple of assumptions:
 
@@ -63,7 +69,9 @@ fastText has just released <a href="https://github.com/facebookresearch/fastText
 
 The fastText software has a reasonable OOV strategy -- it learns about sub-word sequences of characters, and falls back on those when it doesn't know a word -- but as far as I can tell, they didn't release the sub-word information with their pre-trained vectors. Lacking the ability to run their OOV strategy, I turned off our own OOV strategy to make a fair comparison:
 
-<a href="/2017/03/semeval-hypothetical.png"><img src="https://conceptnetblog.files.wordpress.com/2017/03/semeval-hypothetical.png?w=840" alt="Luminoso performs comfortably above word2vec and fastText in this graph." width="840" height="500" class="size-large wp-image-469"></a> Comparison of released word vectors on the SemEval data, without using any OOV strategy.
+<a href="/2017/03/semeval-hypothetical.png"><img src="https://conceptnetblog.files.wordpress.com/2017/03/semeval-hypothetical.png?w=840" alt="Luminoso performs comfortably above word2vec and fastText in this graph." width="840" height="500" class="size-large wp-image-469"></a>
+
+*Comparison of released word vectors on the SemEval data, without using any OOV strategy.*
 
 Note that word2vec is doing better than fastText, due to being trained on more data, but it's only in English. Luminoso's ConceptNet-based system, even without its OOV strategy, is doing much better than these well-known systems. And when I experiment with bolting ConceptNet's OOV onto fastText, it only gets above the baseline system in German.
 

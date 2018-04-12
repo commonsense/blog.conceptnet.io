@@ -1,4 +1,4 @@
-<html><body><a href="https://github.com/LuminosoInsight/python-ftfy">ftfy</a> is Luminoso's open-source Unicode-fixing library for Python.
+<a href="https://github.com/LuminosoInsight/python-ftfy">ftfy</a> is Luminoso's open-source Unicode-fixing library for Python.
 
 Luminoso's biggest open-source project is ConceptNet, but we also use this blog to provide updates on our other open-source projects. And among these projects, ftfy is certainly the most widely used. It solves a problem a lot of people have with "no faffing about", as a grateful e-mail I received put it.
 
@@ -6,15 +6,17 @@ When you use the <code>ftfy.fix_text()</code> function, it detects and fixes s
 
 Here's an example that fixes some multiply-mangled Unicode that I actually found on the Web:
 
-<pre>&gt;&gt;&gt; print(ftfy.fix_text("&amp;macr;\\_(ãƒ„)_/&amp;macr;"))
+```
+>>> print(ftfy.fix_text("&macr;\\_(ãƒ„)_/&macr;"))
 ¯\_(ツ)_/¯
-</pre>
+```
 
 Another example, from a Twitter-bot gone wrong:
 
-<pre>&gt;&gt;&gt; print(ftfy.fix_text("#╨┐╤Ç╨░╨▓╨╕╨╗╤î╨╜╨╛╨╡╨┐╨╕╤é╨░╨╜╨╕╨╡"))
+```
+>>> print(ftfy.fix_text("#╨┐╤Ç╨░╨▓╨╕╨╗╤î╨╜╨╛╨╡╨┐╨╕╤é╨░╨╜╨╕╨╡"))
 #правильноепитание
-</pre>
+```
 
 So we're proud to present two new releases of ftfy, versions 4.4 and 5.0. Let's start by talking about the big change:
 
@@ -22,9 +24,9 @@ So we're proud to present two new releases of ftfy, versions 4.4 and 5.0. Let's 
 
 That's right: as of version 4.4, ftfy is better at dealing with encodings of Eastern European languages! After all, sometimes your text is in Polish, like the labels on this very serious-looking control panel. Or maybe it's in Czech, Slovak, Hungarian, or a language with similar accented letters.
 
-Before Unicode, people would handle these alphabets using a single-byte encoding designed for them, like Windows-1250, which would be incompatible with other languages. In that encoding, the photographer's name is the byte string <code>w\xb3odi</code>. But now the standard encoding of the Web is UTF-8, where the same name is <code>w\xc5\x82odi</code>.
+Before Unicode, people would handle these alphabets using a single-byte encoding designed for them, like Windows-1250, which would be incompatible with other languages. In that encoding, the photographer's name is the byte string `w\xb3odi`. But now the standard encoding of the Web is UTF-8, where the same name is `w\xc5\x82odi`.
 
-The encoding errors you might encounter due to mixing these up used to be underrepresented in the test data I collected. You might end up with the name looking like "wĹ‚odi" and ftfy would just throw up its hands like <code>&amp;macr;\\_(ãƒ„)_/&amp;macr;</code>. But now it understands what happened to that name and how to fix it.
+The encoding errors you might encounter due to mixing these up used to be underrepresented in the test data I collected. You might end up with the name looking like "wĹ‚odi" and ftfy would just throw up its hands like `&macr;\\_(ãƒ„)_/&macr;`. But now it understands what happened to that name and how to fix it.
 
 Oh, but what about that text I photoshopped onto the button?
 
@@ -48,7 +50,9 @@ But if you're still on Python 2 -- possibly due to forces outside your control -
 
 <h2>One more real-world example</h2>
 
-<pre>&gt;&gt;&gt; from ftfy.fixes import fix_encoding_and_explain
-&gt;&gt;&gt; fix_encoding_and_explain("NapĂ\xadĹˇte nĂˇm !")
-('Napíšte nám !',
- [('encode', 'sloppy-windows-1250', 2), ('decode', 'utf-8', 0)])</pre></body></html>
+```
+>>> from ftfy.fixes import fix_encoding_and_explain
+>>> fix_encoding_and_explain("NapĂ\xadĹˇte nĂˇm !")
+('Napíšte nám !', [('encode', 'sloppy-windows-1250', 2), ('decode', 'utf-8', 0)])
+```
+

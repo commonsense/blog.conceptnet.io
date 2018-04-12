@@ -28,6 +28,10 @@ code, pre {
     font-family: Inconsolata;
 }
 
+pre {
+    font-size: 16px;
+}
+
 .navbar-inverse .navbar-nav > li > a {
     font-family: 'Noto Sans', 'Droid Sans', Helvetica, Arial, sans-serif;
     color: #249;
@@ -42,4 +46,26 @@ code, pre {
 
 .navbar-inverse {
     background-color: #eee;
+}
+
+.tags > li {
+    font-size: 16px;
+    font-family: 'Noto Sans', 'Droid Sans', Helvetica, Arial, sans-serif;
+    border-radius: 5px;
+    padding: 5px 10px;
+    background-color: #dde;
+    color: #000;
+}
+
+.tags > li a {
+    color: #000;
+}
+
+.badge {
+    font-size: 16px;
+    font-family: 'Noto Sans', 'Droid Sans', Helvetica, Arial, sans-serif;
+    border-radius: 5px;
+    padding: 5px 10px;
+    background-color: #dde;
+    color: #000;
 }

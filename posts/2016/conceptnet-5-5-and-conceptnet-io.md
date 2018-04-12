@@ -22,7 +22,9 @@ To pick one example, word2vec seems to think that because the terms "Red Sox" an
 
 When we take good word embeddings and <em>add</em> ConceptNet to them, the results are state-of-the-art on several standard evaluations of word embeddings, even outperforming recently-released systems such as FastText.
 
-<img class="alignnone size-full wp-image-363" src="/2016/11/numberbatch-comparison-graph.png" alt="numberbatch-comparison-graph" width="981" height="374"> Comparing the performance of available word-embedding systems. Scores are measured by Spearman correlation with the gold standard, or (for SAT analogies) by the proportion of correct answers. The orange bar is the embeddings used in ConceptNet 5.5.
+<img class="alignnone size-full wp-image-363" src="/2016/11/numberbatch-comparison-graph.png" alt="numberbatch-comparison-graph" width="981" height="374">
+
+*Comparing the performance of available word-embedding systems. Scores are measured by Spearman correlation with the gold standard, or (for SAT analogies) by the proportion of correct answers. The orange bar is the embeddings used in ConceptNet 5.5.*
 
 We could achieve results like this with ConceptNet 5.4 as well, but 5.5 has a big change in its representation that makes it a better match for word embeddings. In previous versions, English words were all reduced to a root form before they were even represented as a ConceptNet node. There was a node for "write", and no node for "wrote"; a node for "dog", and no node for "dogs". If you had a word in its inflected form, you had to reduce it to a root form (using the same algorithm as ConceptNet) to get results. That helped for making the data more strongly-connected, but made it hard to use ConceptNet with other things.
 
@@ -32,7 +34,9 @@ So in ConceptNet 5.5, we've changed the representation of word forms. There are 
 
 <h2>Solving analogies like a college applicant</h2>
 
-<img class="alignnone size-full wp-image-425" src="/2016/11/analogy-screenshot.png" alt="analogy-screenshot" width="394" height="120"> ConceptNet picks the right answer to an SAT question.
+<img class="alignnone size-full wp-image-425" src="/2016/11/analogy-screenshot.png" alt="analogy-screenshot" width="394" height="120">
+
+*ConceptNet picks the right answer to an SAT question.*
 
 One way to demonstrate that your word-embedding system has a good representation of meaning is to use it to solve word analogies. The usual example, pretty much a cliché by now, is "man : woman :: king : queen". You want those word vectors to form something like a parallelogram in your vector space, indicating that the relationships between these words are parallel to each other, even if the system can't explain in words what the relationship is. (And I really wish it could.)
 
