@@ -25,7 +25,7 @@ p.commentline, p.sourceline {
 }
 
 code, pre {
-    font-family: Inconsolata;
+    font-family: Inconsolata, Consolas, Menlo, Monaco, 'Andale Mono', 'Liberation Mono', monospace;
 }
 
 pre {
