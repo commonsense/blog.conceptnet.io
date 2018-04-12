@@ -135,6 +135,7 @@ TRANSLATIONS_PATTERN = "{path}.{lang}.{ext}"
 
 NAVIGATION_LINKS = {
     DEFAULT_LANG: (
+        ("//www.conceptnet.io", "Explore ConceptNet"),
         ("/archive.html", "Archive"),
         ("/categories/", "Tags"),
         ("/rss.xml", "RSS feed"),
@@ -146,7 +147,7 @@ THEME = "bootstrap3"
 
 # Primary color of your theme. This will be used to customize your theme and
 # auto-generate related colors in POSTS_SECTION_COLORS. Must be a HEX value.
-THEME_COLOR = '#5670d4'
+THEME_COLOR = '#0087be'
 
 # POSTS and PAGES contains (wildcard, destination, template) tuples.
 # (translatable)
@@ -214,7 +215,7 @@ TIMEZONE = "America/New_York"
 
 # Date format used to display post dates. (translatable)
 # (str used by datetime.datetime.strftime)
-# DATE_FORMAT = '%Y-%m-%d %H:%M'
+DATE_FORMAT = '%B %-d, %Y'
 
 # Date format used to display post dates, if local dates are used. (translatable)
 # (str used by moment.js)
@@ -300,7 +301,7 @@ COMPILERS = {
 
 # What format to use when creating posts with date paths?
 # Default is '%Y/%m/%d', other possibilities include '%Y' or '%Y/%m'.
-# NEW_POST_DATE_PATH_FORMAT = '%Y/%m/%d'
+NEW_POST_DATE_PATH_FORMAT = '%Y'
 
 # If this is set to True, the DEFAULT_LANG version will be displayed for
 # untranslated posts.
@@ -324,7 +325,7 @@ WRITE_TAG_CLOUD = False
 
 # Generate pages for each section. The site must have at least two sections
 # for this option to take effect. It wouldn't build for just one section.
-POSTS_SECTIONS = True
+# POSTS_SECTIONS = True
 
 # Setting this to False generates a list page instead of an index. Indexes
 # are the default and will apply GENERATE_ATOM if set.
@@ -441,7 +442,7 @@ HIDDEN_TAGS = ['mathjax']
 # TAGLIST_MINIMUM_POSTS number of posts or more with every tag. Every tag
 # page is still generated, linked from posts, and included in the sitemap.
 # However, more obscure tags can be hidden from the tag index page.
-# TAGLIST_MINIMUM_POSTS = 1
+TAGLIST_MINIMUM_POSTS = 2
 
 # A list of dictionaries specifying tags which translate to each other.
 # Format: a list of dicts {language: translation, language2: translation2, …}

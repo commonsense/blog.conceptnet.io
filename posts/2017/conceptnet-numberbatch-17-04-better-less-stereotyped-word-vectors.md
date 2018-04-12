@@ -1,4 +1,6 @@
-<html><body><i><span style="font-weight:400;">Word embeddings</span></i><span style="font-weight:400;"> or </span><i><span style="font-weight:400;">word vectors</span></i><span style="font-weight:400;"> are a way for computers to understand what words mean in text written by people. The goal is to represent words as lists of numbers, where small changes to the numbers represent small changes to the meaning of the word. This is a technique that helps in building AI algorithms for natural language understanding -- using word vectors, the algorithm can compare words by what they mean, not just by how they’re spelled.</span>
+<html><body>
+
+*Word embeddings* or *word vectors* are a way for computers to understand what words mean in text written by people. The goal is to represent words as lists of numbers, where small changes to the numbers represent small changes to the meaning of the word. This is a technique that helps in building AI algorithms for natural language understanding -- using word vectors, the algorithm can compare words by what they mean, not just by how they’re spelled.
 
 But the news that's breaking everywhere about word vectors is that they also represent the worst parts of what people mean. Stereotypes and prejudices are baked into what the computer believes to be the meanings of words. To put it bluntly, the computer learns to be sexist and racist, because it learns from what people say.
 
