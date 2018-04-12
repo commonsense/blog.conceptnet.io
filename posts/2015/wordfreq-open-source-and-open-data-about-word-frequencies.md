@@ -1,4 +1,4 @@
-<html><body>
+<small><em>Unfortunately, the images in this post have been lost to history. We blame WordPress, which we don't use anymore. We recommend reading [a more recent post](/posts/2016/wordfreq-1-5-more-data-more-languages-more-accuracy/) anyway.</em></small>
 
 Often, in NLP, you need to answer the simple question: "is this a common word?" It turns out that this leaves the computer to answer a more vexing question: "What's a word?"
 
@@ -94,4 +94,5 @@ But it's important to note the trade-off here, that wordfreq only represents suf
 
 wordfreq is available <a href="https://github.com/LuminosoInsight/wordfreq">on GitHub</a>, or it can be installed from the Python Package Index with the command <i>pip install wordfreq</i>. Documentation can be found in <a href="https://github.com/LuminosoInsight/wordfreq">its README on GitHub</a>.
 
-<a href="https://luminosoinsight.files.wordpress.com/2015/08/cafe-frequency.png"><img class="size-full wp-image-771" src="https://luminosoinsight.files.wordpress.com/2015/08/cafe-frequency.png" alt="wordfreq usage example" width="364" height="219"></a> Comparing the frequency per million words of two spellings of "café", in English and French.</body></html>
+<a href="https://luminosoinsight.files.wordpress.com/2015/08/cafe-frequency.png"><img class="size-full wp-image-771" src="https://luminosoinsight.files.wordpress.com/2015/08/cafe-frequency.png" alt="wordfreq usage example" width="364" height="219"></a> Comparing the frequency per million words of two spellings of "café", in English and French.
+

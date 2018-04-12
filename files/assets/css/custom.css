@@ -20,7 +20,7 @@ p, li {
     max-width: 80%;
 }
 
-p.commentline {
+p.commentline, p.sourceline {
     display: none;
 }
 
@@ -68,4 +68,23 @@ pre {
     padding: 5px 10px;
     background-color: #dde;
     color: #000;
+}
+
+.navbar-brand #logo {
+    margin-right: 8px;
+}
+
+div.prompt {
+    display: none;
+}
+
+div.output_area pre {
+    font-size: 19px !important;
+}
+
+.rendered_html code {
+    font-size: 19px !important;
+}
+.rendered_html table {
+    font-size: 16px !important;
 }

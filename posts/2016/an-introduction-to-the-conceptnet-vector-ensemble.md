@@ -1,8 +1,8 @@
-<html><body><h6><em>Originally published on April 6, 2016.</em></h6>
+<small><em>Unfortunately, the images in this post have been lost to history. We blame WordPress, which we don't use anymore. We recommend reading [a more recent post](/posts/2017/how-luminoso-made-conceptnet-into-the-best-word-vectors-and-won-at-semeval/) anyway.</em></small>
 
 Here's a big idea that's taken hold in natural language processing: <strong>meanings are vectors</strong>. A text-understanding system can represent the approximate meaning of a word or phrase by representing it as a vector in a multi-dimensional space. Vectors that are close to each other represent similar meanings.
 
-<a href="https://luminosoinsight.files.wordpress.com/2016/04/concept-cloud-snapshot.png" rel="attachment wp-att-854"><img class="size-full wp-image-854" src="https://luminosoinsight.files.wordpress.com/2016/04/concept-cloud-snapshot.png" alt="A fragment of a concept-cloud visualization of the ConceptNet Vector Ensemble (CNVE). Words that appear close to each other are similar." width="629" height="535"></a> A fragment of a concept-cloud visualization of the ConceptNet Vector Ensemble (CNVE).
+<a href="https://luminosoinsight.files.wordpress.com/2016/04/concept-cloud-snapshot.png" rel="attachment wp-att-854"><img class="size-full wp-image-854" src="https://luminosoinsight.files.wordpress.com/2016/04/concept-cloud-snapshot.png" alt="A fragment of a concept-cloud visualization of the ConceptNet Vector Ensemble (CNVE). Words that appear close to each other are similar." width="629" height="535"></a>
 
 Vectors are how Luminoso has always represented meaning. When we started Luminoso, this was seen as a bit of a crazy idea.
 
@@ -12,13 +12,13 @@ Luminoso's starting point -- its model of word meanings when it hasn't seen any 
 
 But you might well ask: if these newer systems such as word2vec or <a href="http://nlp.stanford.edu/projects/glove/">GloVe</a> are so effective, should we be using them as our starting point?
 
-<a href="https://luminosoinsight.files.wordpress.com/2016/04/whynotboth.jpg" rel="attachment wp-att-855"><img class="alignnone size-full wp-image-855" src="https://luminosoinsight.files.wordpress.com/2016/04/whynotboth.jpg" alt="As the girl in the Old El Paso commercial asks, " width="480" height="360"></a>
+<a href="https://luminosoinsight.files.wordpress.com/2016/04/whynotboth.jpg" rel="attachment wp-att-855"><img class="alignnone size-full wp-image-855" src="https://luminosoinsight.files.wordpress.com/2016/04/whynotboth.jpg" alt="As the girl in the Old El Paso commercial asks, 'why don't we have both?'" width="480" height="360"></a>
 
 The best representation of word meanings we've seen -- and we think it's the best representation of word meanings <em>anyone</em> has seen -- is our new ensemble that combines <a href="http://conceptnet5.media.mit.edu/">ConceptNet</a>, <a href="http://nlp.stanford.edu/projects/glove/">GloVe</a>, <a href="http://www.cis.upenn.edu/~ccb/ppdb/">PPDB</a>, and <a href="https://code.google.com/archive/p/word2vec/">word2vec</a>. It's described in our paper, "<a href="http://arxiv.org/pdf/1604.01692.pdf">An Ensemble Method to Produce High-Quality Word Embeddings</a>", and it's reproducible using <a href="https://github.com/LuminosoInsight/conceptnet-vector-ensemble">this GitHub repository</a>.
 
 We call this the ConceptNet Vector Ensemble. These domain-general word embeddings fill the same niche as, for example, the word2vec Google News vectors, but by several measures, they represent related meanings more like people do.
 
-<a href="https://luminosoinsight.files.wordpress.com/2016/04/comparison.png" rel="attachment wp-att-856"><img class="size-full wp-image-856" src="https://luminosoinsight.files.wordpress.com/2016/04/comparison.png" alt="A comparison of some word-embedding systems on two measures of word relatedness. Our system, CNVE, is the red dot in the upper right." width="808" height="488"></a> A comparison of some word-embedding systems on two measures of word relatedness. Our system, CNVE, is the red dot in the upper right.
+<a href="https://luminosoinsight.files.wordpress.com/2016/04/comparison.png" rel="attachment wp-att-856"><img class="size-full wp-image-856" src="https://luminosoinsight.files.wordpress.com/2016/04/comparison.png" alt="A comparison of some word-embedding systems on two measures of word relatedness. Our system, CNVE, is the red dot in the upper right." width="808" height="488"></a>
 
 <h2>Expanding on "retrofitting"</h2>
 
@@ -44,10 +44,10 @@ When we compared word2vec and GloVe, we got better initial results from GloVe. 
 
 You can probably guess the next step: "why don't we use both?" word2vec's most broadly useful vectors come from Google News articles, while GloVe's come from reading the Web at large. Those represent different kinds of information. Both of them should be in the system. In the ConceptNet Vector Ensemble, we build a vector space that combines word2vec and GloVe before we start retrofitting.
 
-<a href="https://luminosoinsight.files.wordpress.com/2016/04/dataflow1.png" rel="attachment wp-att-857"><img class="wp-image-858 size-full" src="https://luminosoinsight.files.wordpress.com/2016/04/dataflow1.png" alt="" width="624" height="576"></a> The data flow of building the ConceptNet Vector Ensemble.
+<a href="https://luminosoinsight.files.wordpress.com/2016/04/dataflow1.png" rel="attachment wp-att-857"><img class="wp-image-858 size-full" src="https://luminosoinsight.files.wordpress.com/2016/04/dataflow1.png" alt="The data flow of building the ConceptNet Vector Ensemble" width="624" height="576"></a>
 
 You can see that creating state-of-the-art word embeddings involves ideas from a number of different people. A few of them are our own -- particularly ConceptNet 5, which is entirely developed at Luminoso these days, and the various ways we transformed word embeddings to make them work better together.
 
 This is an exciting, fast-moving area of NLP. We're telling everyone about our vectors because the openness of word-embedding research made them possible, and if we kept our own improvement quiet, the field would probably find a way to move on without it at the cost of some unnecessary effort.
 
-These vectors <a href="https://github.com/LuminosoInsight/conceptnet-vector-ensemble">are available for download</a> under a Creative Commons Attribution Share-Alike license. If you're working on an application that starts from a vector representation of words -- maybe you're working in the still-congealing field of Deep Learning methods for NLP -- you should give the ConceptNet Vector Ensemble a try.</body></html>
+These vectors <a href="https://github.com/LuminosoInsight/conceptnet-vector-ensemble">are available for download</a> under a Creative Commons Attribution Share-Alike license. If you're working on an application that starts from a vector representation of words -- maybe you're working in the still-congealing field of Deep Learning methods for NLP -- you should give the ConceptNet Vector Ensemble a try.
