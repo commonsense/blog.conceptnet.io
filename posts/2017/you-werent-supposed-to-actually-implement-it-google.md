@@ -1,4 +1,4 @@
-Last month, I wrote a blog post warning about how, if you follow popular trends in NLP, you can easily accidentally make <a href="https://blog.conceptnet.io/2017/07/13/how-to-make-a-racist-ai-without-really-trying/">a classifier that is pretty racist</a>. To demonstrate this, I included the very simple code, as a "cautionary tutorial".
+Last month, I wrote a blog post warning about how, if you follow popular trends in NLP, you can easily accidentally make <a href="http://blog.conceptnet.io/2017/07/13/how-to-make-a-racist-ai-without-really-trying/">a classifier that is pretty racist</a>. To demonstrate this, I included the very simple code, as a "cautionary tutorial".
 
 The post got a fair amount of reaction. Much of it positive and taking it seriously, so thanks for that. But eventually I heard from some detractors. Of course there were the fully expected "I'm not racist but what if racism is correct" retorts that I knew I'd have to face. But there were also people who couldn't believe that anyone does NLP this way. They said I was talking about a non-problem that doesn't show up in serious machine learning, or projecting my own bad NLP ideas, or something.
 
