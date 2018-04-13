@@ -41,6 +41,6 @@ In September 2017, [Violet Blue wrote an exposé of Perspective API](https://www
 
 Perspective API has changed their online demo to lower toxicity scores across the board, without fundamentally changing the model. Text with a score under a certain threshold is now labeled as "not toxic". I believe this remedy could be described technically as "weak sauce".
 
-The Perspective API team claims that their system has no inherent bias against non-white names, and that the higher toxicity scores that appear for names such as "DeShawn" is an artifact of how they handle out-of-vocabulary words. All the names that are typical for white people are in-vocabulary. Make of that what you will.
+The Perspective API team claims that their system has no inherent bias against non-white names, and that the higher toxicity scores that appear for names such as "DeShawn" is an artifact of how they handle out-of-vocabulary words. All the names that are typical for white Americans are in-vocabulary. Make of that what you will.
 
 The Perspective API team continues to promote their product, such as via hackathons and TED talks. Users of the API are not warned of its biases, except for a generic warning that could apply to any AI system, saying that users should manually review its results. It is still sometimes held up as a *positive* example of fighting toxicity with NLP, misleading lay audiences into thinking that present NLP has a solution to toxicity.
