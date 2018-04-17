@@ -5,7 +5,7 @@
 Data changes:
 
 <ul>
-<li>Uses ConceptNet Numberbatch 17.06, which incorporates <a href="https://blog.conceptnet.io/2017/04/24/conceptnet-numberbatch-17-04-better-less-stereotyped-word-vectors/">de-biasing</a> to avoid harmful stereotypes being encoded in its word representations.</li>
+<li>Uses ConceptNet Numberbatch 17.06, which incorporates <a href="http://blog.conceptnet.io/2017/04/24/conceptnet-numberbatch-17-04-better-less-stereotyped-word-vectors/">de-biasing</a> to avoid harmful stereotypes being encoded in its word representations.</li>
 <li>Fixed a glitch in retrofitting, where terms in ConceptNet that were two steps removed from any term that existed in one of the existing word-embedding data sources were all being assigned the same meaningless vector. They now get vectors that are propagated (after multiple steps) from terms that do have existing word embeddings, as intended.</li>
 <li>Filtered some harmful assertions that came from disruptive or confused Open Mind Common Sense contributors. (Some of them had been filtered before, but changes to the term representation had defeated the filters.)</li>
 <li>Added a new source of input word embeddings, created at Luminoso by running a multilingual variant of fastText over OpenSubtitles 2016. This provides a source of real-world usage of non-English words.</li>

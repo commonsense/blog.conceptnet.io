@@ -14,7 +14,7 @@ The multi-word named entities are usually considered separately. Even word2vec, 
 
 <h2>Conceptnet Numberbatch and analogy questions</h2>
 
-I've been posting about the state-of-the-art set of word embeddings, <a href="https://blog.conceptnet.io/2016/05/25/conceptnet-numberbatch-a-new-name-for-the-best-word-embeddings-you-can-download/">Conceptnet Numberbatch</a>, and you might wonder how it does on word2vec's analogies. So even though I'm not a big fan of the word2vec analogy data, I ran a quick evaluation to find out, using Omer Levy's <a href="http://www.aclweb.org/anthology/W14-1618">3CosMul</a> metric for choosing the best analogies. Here's how it scored, broken down by the type of question:
+I've been posting about the state-of-the-art set of word embeddings, <a href="http://blog.conceptnet.io/2016/05/25/conceptnet-numberbatch-a-new-name-for-the-best-word-embeddings-you-can-download/">Conceptnet Numberbatch</a>, and you might wonder how it does on word2vec's analogies. So even though I'm not a big fan of the word2vec analogy data, I ran a quick evaluation to find out, using Omer Levy's <a href="http://www.aclweb.org/anthology/W14-1618">3CosMul</a> metric for choosing the best analogies. Here's how it scored, broken down by the type of question:
 
 <ul>
 <li>Geography: <strong>95.6%</strong></li>

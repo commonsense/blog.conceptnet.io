@@ -38,7 +38,7 @@ ConceptNet Numberbatch is already so much more accurate than any other released
 
 In the graphs above, "word2vec Google News" is the popular system from 2013-2014 that many people go to when they think "oh hey I need some word vectors". Its continued relevance is largely due to the fact that it lets you use data that's learned from Google's large corpus of news, a very nice corpus which you can't actually have. We use its results as an input to ConceptNet Numberbatch.
 
-"GloVe 1.2 840B" is a system from Stanford that is better in some cases, and learns from reading the whole Web via the Common Crawl. It seems to have some fixable problems with the scaling of its features. "GloVe renormalized" is <a href="https://blog.conceptnet.io/2016/05/19/an-introduction-to-the-conceptnet-vector-ensemble/">Luminoso's improvement on GloVe</a>, which we also use as an input.
+"GloVe 1.2 840B" is a system from Stanford that is better in some cases, and learns from reading the whole Web via the Common Crawl. It seems to have some fixable problems with the scaling of its features. "GloVe renormalized" is <a href="http://blog.conceptnet.io/2016/05/19/an-introduction-to-the-conceptnet-vector-ensemble/">Luminoso's improvement on GloVe</a>, which we also use as an input.
 
 "fastText enWP (without OOV)" is <a href="https://github.com/facebookresearch/fastText/blob/master/pretrained-vectors.md">Facebook's word vectors trained on the English Wikipedia</a>, with the disclaimer that their accuracy <em>should</em> be better than what we show here. Facebook's fastText comes with a strategy for handling out-of-vocabulary words, like Numberbatch does. But the data they make available for applying that strategy is in an undocumented binary format that I haven't deciphered yet.
 
