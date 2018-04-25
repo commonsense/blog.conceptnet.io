@@ -1060,7 +1060,7 @@ PRETTY_URLS = True
 # If True, future dated posts are allowed in deployed output
 # Only the individual posts are published/deployed; not in indexes/sitemap
 # Generally, you want FUTURE_IS_NOW and DEPLOY_FUTURE to be the same value.
-# DEPLOY_FUTURE = False
+DEPLOY_FUTURE = True    # don't tell me what to do
 # If False, draft posts will not be deployed
 # DEPLOY_DRAFTS = True
 
