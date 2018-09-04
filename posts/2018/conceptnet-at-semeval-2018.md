@@ -1,6 +1,6 @@
 .. title: ConceptNet's strong performance at SemEval 2018
 .. slug: conceptnet-at-semeval-2018
-.. date: 2018-06-14 13:00:00 UTC-04:00
+.. date: 2018-06-14 11:47:00 UTC-04:00
 .. tags: ConceptNet
 .. category: 
 .. link: 
@@ -14,7 +14,7 @@ tasks, and how they perform on unseen test data.
 I like to submit to SemEval because I see it as the NLP equivalent of
 pre-registered studies. You know the results are real; they're not
 cherry-picked positive results, and they're not repeatedly tuned to the same
-test set. SemEval provides valuable information on which semantic techniques
+test set. SemEval provides valuable evidence about which semantic techniques
 actually work well on new data.
 
 Recently, SemEval has been a compelling demonstration of why ConceptNet is
@@ -30,17 +30,20 @@ result, or if the field was going to write it off as a fluke and go on as it
 was.
 
 We made an impression! This year at SemEval, there were many systems using
-ConceptNet, not just ours. Let's look at these tasks.
+ConceptNet, not just ours. Let's look at the two tasks where ConceptNet made
+an appearance.
 
 ## Story understanding
 
 [Task 11: Machine Comprehension Using Commonsense Knowledge][task11-desc] is a
 task where your NLP system reads a story and then answers some simple questions
-that test its comprehension. There are many NLP evaluations that involve
-reading comprehension, but many of them are susceptible to shallow strategies
-where the machine just learns to parrot key phrases from the text. The
-interesting twist in this one is that about half of the answers are not present
-in the text, but are meant to be inferred using common sense knowledge.
+that test its comprehension.
+
+There are many NLP evaluations that involve reading comprehension, but many of
+them are susceptible to shallow strategies where the machine just learns to
+parrot key phrases from the text. The interesting twist in this one is that
+about half of the answers are not present in the text, but are meant to be
+inferred using common sense knowledge.
 
 Here's an example from [the task paper][task11-desc], by Simon Ostermann et al.:
 
@@ -86,17 +89,16 @@ to see ConceptNet win at a difficult task without any effort from us!
 ## Telling word meanings apart
 
 Our entry this year was for [Task 10: Capturing Discriminative
-Attributes][task10-desc], a task about recognizing difference between words.
-Our system used ConceptNet Numberbatch in combination with four other
-resources, and took second place at the task.
+Attributes][task10-desc], a task about recognizing differences between words.
+Many evaluation tasks, including the multilingual similarity task that we won
+last year, involve recognizing similar words. For example, it's good for a system
+to know that "cappuccino" and "espresso" are similar things. But it's also
+important for a system to know how they differ, and that's what this task is about.
 
-Our system is best described by our poster, which we brought to the event on a
-frighteningly large 6'×4' poster that loomed over everyone and threatened to
-tip over the two tiny poster stands holding it up. (We've now learned that
-A0-sized posters are a vague academic standard, and if an event asks for a
-larger poster, you should ignore them, because nobody expects a poster larger
-than A0.) Anyway, now you can read our poster from the comfort of your Web
-browser:
+[Our entry][task10-ours] used ConceptNet Numberbatch in combination with four
+other resources, and took second place at the task. Our system is best
+described by our poster, which you can now read from the comfort of your Web
+browser.
 
 <a href="/2018/06/naacl2018-poster.pdf">
 <img src="/2018/06/naacl2018-poster.png" alt="A rendering of our poster. The link leads to a PDF version.">
@@ -124,7 +126,7 @@ with the largest knowledge base used by each entry:
 </tr>
 <tr style="background-color: #cfc">
 <td align="right">2</td>
-<td>Luminoso</td>
+<td><strong>Luminoso</strong></td>
 <td align="right">0.74</td>
 <td>ConceptNet</td>
 </tr>
@@ -273,4 +275,5 @@ simple system in a tutorial post soon.
 
 [poster]: /2018/06/naacl2018-poster.pdf
 [task10-desc]: http://aclweb.org/anthology/S18-1117
+[task10-ours]: http://aclweb.org/anthology/S18-1162
 [task11-desc]: http://www.aclweb.org/anthology/S18-1119
