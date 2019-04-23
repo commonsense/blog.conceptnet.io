@@ -86,12 +86,13 @@ pre code {
     background-color: transparent !important;
 }
 
-.input_area > pre code {
+div.input_area pre {
     font-size: 18px !important;
     background-color: #f5f5f5 !important;
+    border-left: 2px solid purple !important;
 }
 
-.output_area > pre {
+div.output_area pre {
     font-size: 18px !important;
 }
 
