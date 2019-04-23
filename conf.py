@@ -216,7 +216,7 @@ TIMEZONE = "America/New_York"
 
 # Date format used to display post dates. (translatable)
 # (str used by datetime.datetime.strftime)
-DATE_FORMAT = '%B %-d, %Y'
+DATE_FORMAT = 'MMMM d, y'
 
 # Date format used to display post dates, if local dates are used. (translatable)
 # (str used by moment.js)
@@ -302,7 +302,7 @@ NEW_POST_DATE_PATH = True
 
 # What format to use when creating posts with date paths?
 # Default is '%Y/%m/%d', other possibilities include '%Y' or '%Y/%m'.
-NEW_POST_DATE_PATH_FORMAT = '%Y'
+NEW_POST_DATE_PATH_FORMAT = 'y'
 
 # If this is set to True, the DEFAULT_LANG version will be displayed for
 # untranslated posts.
@@ -1288,7 +1288,7 @@ INDEX_DISPLAY_POST_COUNT = 5
 
 # If you hate "Filenames with Capital Letters and Spaces.md", you should
 # set this to true.
-UNSLUGIFY_TITLES = True
+FILE_METADATA_UNSLUGIFY_TITLES = True
 
 # Additional metadata that is added to a post when creating a new_post
 # ADDITIONAL_METADATA = {}

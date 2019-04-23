@@ -22,11 +22,11 @@ If you want to apply machine learning to the meanings of words and sentences, yo
 
 Here's an example that we can step through. Suppose we want to ask Conceptnet Numberbatch whether Benedict Cumberbatch is more like an actor or an otter. We start by looking up the rows labeled <em>cumberbatch</em>, <em>actor</em>, and <em>otter</em> in Numberbatch. This gives us a 600-dimensional unit vector for each of them. Here are all of them graphed component-by-component:
 
-<img class="aligncenter wp-image-942 size-full" src="https://luminosoinsight.files.wordpress.com/2016/05/cumberbatch-example-11.png" width="745" height="422">
+<img class="aligncenter wp-image-942 size-full" src="/2016/05/cumberbatch-example-1.png" width="745" height="422">
 
 These are pretty hard for us to compare visually, but arrays of numbers are quite easy for computers to work with. The important thing here is that vectors that are similar will point in similar directions (which means they have a high dot product as unit vectors). When we look at them component-by-component here, that means that a vector is similar to another vector when they are positive in the same places and negative in the same places. We can visualize this similarity by multiplying the vectors component-wise:
 
-<img class="aligncenter wp-image-943 size-full" src="https://luminosoinsight.files.wordpress.com/2016/05/cumberbatch-example-21.png" width="726" height="271">
+<img class="aligncenter wp-image-943 size-full" src="/2016/05/cumberbatch-example-2.png" width="726" height="271">
 
 The <em>cumberbatch * actor</em> plot shows a lot more positive components and fewer negative components than <em>cumberbatch * otter</em>, particularly near the left side. The term <em>cumberbatch </em>is like <em>actor</em> in many ways, and unlike it in very few ways. Adding up the component-wise products, we find that <em>cumberbatch</em> is 0.35 similar to <em>actor</em> on a scale from -1 to 1, and it's only 0.04 similar to <em>otter</em>.
 
