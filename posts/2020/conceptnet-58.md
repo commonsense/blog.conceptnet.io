@@ -1,7 +1,7 @@
 <!--
 .. title: ConceptNet 5.8
 .. slug: conceptnet-58
-.. date: 2020-05-14 13:20:00 UTC-04:00
+.. date: 2020-05-20 13:20:00 UTC-04:00
 .. tags: ConceptNet, Releases
 .. category:
 .. link:
@@ -9,14 +9,18 @@
 .. type: text
 -->
 
-ConceptNet 5.8 has been released! Here's an overview of what's changed.
+ConceptNet 5.8 has been released!
+
+In this release, we're focused on improving the maintainability of ConceptNet,
+with a few small but significant changes to the data. Here's an overview of
+what's changed.
 
 ## HTTPS support
 
 You can now reach ConceptNet's web site and API over HTTPS. There's nothing
-about ConceptNet that particularly requires encryption, but there are reasons
-that the security of the Web as a whole would be better if every site could be
-reached through HTTPS, and we're happy to go along with that.
+about ConceptNet that particularly requires encryption, but the security of the
+Web as a whole would be better if every site could be reached through HTTPS,
+and we're happy to go along with that.
 
 One immediate benefit is that an HTTPS web page can safely make requests to
 ConceptNet's API.
@@ -29,6 +33,26 @@ easier to deploy, without a long list of things that must be done manually.
 
 This should also allow us, soon, to update the instructions on how to run one's
 own copy of the ConceptNet API without so much manual effort.
+
+## Distinguishing Indonesian (`id`) and Malay (`ms`)
+
+The use of the language code `ms` in earlier releases of ConceptNet 5 reflects
+our uncertainty about the scope of the `ms` language code. Some sources said it
+was a "macrolanguage" code for all Malay languages including Indonesian, so we
+implemented it similarly to the macrolanguage `zh` for Chinese languages.
+Thus, we formerly used `ms` to include both Indonesian (_bahasa Indonesia_) and
+the specific Malay language (_bahasa Melayu_).
+
+This led to confusion of words that have different meanings or connotations in
+the two languages, and the appearance that Indonesian was missing from the
+language list. In retrospect, it's better and more expected to represent the
+Indonesian language with its own language code, `id`.
+
+So in version 5.8, we have separate support for Indonesian (`id`) and Malay
+(`ms`). This is the largest data change in ConceptNet 5.8. Fortunately, our
+largest sources of data for these languages (Open Multilingual WordNet and
+Wiktionary) have similar coverage of both languages.
+
 
 ## Updated French and German Wiktionary
 
@@ -72,7 +96,7 @@ find out what they mean if you don't know.
 
 In ConceptNet, such an entry ends up as an edge between X and Y, which is the
 same as an edge between Y and X. So, unfortunately, looking up an ordinary word
-in ConceptNet could produce a list of its offensive synonyms, and these word
+in ConceptNet could produce a list of hateful synonyms, and these word
 associations would also be learned by semantic models such as ConceptNet
 Numberbatch.
 
@@ -97,6 +121,10 @@ only really do this in English. If you see ConceptNet edges that should be
 filtered out, feel free to [let me know in an
 e-mail](mailto:rspeer@luminoso.com). With continuous integration, I should even
 be able to fix it in a timely manner.
+
+This filtering caused no significant change in our semantic benchmarks. As they
+say, "nothing of value was lost".
+
 
 ## Cleaning up ExternalURLs
 
