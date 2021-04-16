@@ -146,4 +146,3 @@ ExternalURL.
 
 [conceptnet]: http://conceptnet.io
 
-<img src="/2020/05/external-links.png" alt="The new 'external links' section on the ConceptNet page.">
